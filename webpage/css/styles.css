@@ -27,14 +27,6 @@ hr {
     height: 2px;
 }
 
-.nav-resume {
-    background-color: #7B0202 !important;
-    color: #fff;
-    font-weight: bold;
-    position: fixed;
-    width: 100%;
-}
-
 h1, h2, h3, h4, h5 {
     color: #000;
     font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -59,21 +51,33 @@ h3 {
 
 section {
     display: block;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     max-width: 75rem;
+    padding: 5rem 1.5rem;
+}
+
+footer {
+    background-color: #222C38;
+    position: fixed;
+    top: 100vh;
+    height: 50px;
+    margin-top: -50px;
+    width: 100%;
 }
 
 div.hr {
-    padding: 0;
     margin: 0;
     max-width: 75rem;
+    padding: 0;
 }
 
 .nav-resume {
+    background-color: #7B0202 !important;
+    color: #fff;
+    font-weight: bold;
+    position: fixed;
     text-align: center;
+    width: 100%;
+    z-index:1;
 }
 
 .nav-link {
@@ -89,8 +93,8 @@ div.hr {
 }
 
 .resume {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 .personal-info__subheading {
@@ -162,33 +166,107 @@ div.hr {
 .resume-section-card {
     border: 1px solid #0000;
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 6px 2px;
     margin-bottom: 2rem;
     padding: 10px 20px;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 6px 2px;
 }
 
 .resume-section-card:hover {
     background-color: #222c3810;
-    box-shadow: rgba(0, 0, 0, 0.4) 4px 4px 6px 4px;
     border: 1px solid #0002;
+    box-shadow: rgba(0, 0, 0, 0.4) 4px 4px 6px 4px;
 }
 
 .resume-section-skills {
     border: 1px solid #0000;
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 6px 2px;
     margin-bottom: 2rem;
     padding: 10px 20px;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 3px 3px 6px 2px;
 }
 
 .resume-section-skills:hover {
     background-color: #222c3810;
-    box-shadow: rgba(0, 0, 0, 0.4) 4px 4px 6px 4px;
     border: 1px solid #0002;
+    box-shadow: rgba(0, 0, 0, 0.4) 4px 4px 6px 4px;
 }
 
+.tools-title {
+    background-color: #222C38;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.item {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 1.5em;
+}
+
+.item-element {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px 2px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.item-description {
+    height: 50px;
+}
+
+.item-description-title {
+    font-size: 1.8rem;
+    margin: 10px auto;
+}
+
+
+.item-image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: -1;
+    
+}
+
+.item-image__overlay:hover {
+    background-color:#0005;
+}
+
+.carousel-section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px 10px;
+}
+
+.carousel-item h5 {
+    background-color: #000a;
+    color: white;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.carousel-item p {
+    background-color: #000a;
+    color: white;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.carousel-control-prev {
+    background-color: #000a;
+}
+
+.carousel-control-next {
+    background-color: #000a;
+}
 
 @media only screen and (min-width: 766px) {
 
@@ -219,19 +297,19 @@ div.hr {
 
 @media only screen and (min-width: 992px) {
     body {
-        padding-top: 0;
         padding-left: 17rem;
+        padding-top: 0;
     }
     
     .nav-resume {
-        position: fixed;
-        top: 0;
-        left: 0;
         display: flex;
         flex-direction: column;
-        width: 17rem;
         height: 100vh;
         justify-content: flex-start;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 17rem;
     }
 
     .navbar-brand {
